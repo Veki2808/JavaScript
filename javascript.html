@@ -6,23 +6,29 @@
 
 <body>
     <script type="text/javascript">
-        var a = 3;
-        var b = 4;
-        var firstName = "Vernes";
-        var lastName = "Halilovic";
+        var condition = "-";
+        var a = 4;
+        var b = 5;
 
-        if (a == b) {
-            document.write("Variables are equal", "<br />");
+        switch (condition) {
+            case "+":
+                addition(a, b);
+                break;
+            case "-":
+                subtraction(a, b);
+                break;
+            default:
+                document.write("Wrong condition !!!", "<br />");
         }
 
-        if (a > b) {
-            document.write("First number is bigger then second", "<br />");
-        } else if (a != b) {
-            document.write("Second number is bigger then first", "<br />");
+        function addition(a, b) {
+            var c = a + b;
+            document.write(c, "<br />");
         }
 
-        if ((firstName == "Vernes") && (lastName == "Halilovic")) {
-            document.write(firstName,"<br />",lastName, "<br />");
+        function subtraction(a, b) {
+            var c = a - b;
+            document.write(c, "<br />");
         }
     </script>
 
