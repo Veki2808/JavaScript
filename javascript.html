@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    </head>
-    <body>
-        <script type = "text/javascript">
 
-        var a = 7;
+<head>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var a = 3;
         var b = 4;
+        var firstName = "Vernes";
+        var lastName = "Halilovic";
 
         if (a == b) {
-            document.write("Variables are equal","<br />");
+            document.write("Variables are equal", "<br />");
         }
 
         if (a > b) {
-            document.write("First number is bigger then second","<br />");
-        } else {
-            document.write("Second number is bigger then first","<br />");
+            document.write("First number is bigger then second", "<br />");
+        } else if (a != b) {
+            document.write("Second number is bigger then first", "<br />");
         }
 
-        </script>
+        if ((firstName == "Vernes") && (lastName == "Halilovic")) {
+            document.write(firstName,"<br />",lastName, "<br />");
+        }
+    </script>
 
-    </body>
+</body>
+
 </html>
