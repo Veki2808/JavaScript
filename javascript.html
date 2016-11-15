@@ -3,13 +3,38 @@
     <head>
     </head>
     <body>
-        <script type="text/javascript">
-            var i = 20;
-            var j = -20;
-            var x = 20.456;
-            var string = "Hello World"
-            var name = "Justin"
-            document.write(name,string + "!!!" );
+        <script type = "text/javascript">
+            //Function
+            function fun() {
+                alert("Warrning!!!"); //Pop message
+            }
+
+            //Passing arguments to function
+            function multiple_parameters(a, b){
+                document.write("First name: " + a + "<br />" + "Last name: " + b + "<br />");
+            }
+            multiple_parameters("Vernes", "Halilovic");
+
+            //The return statement
+            function sum(a,b){
+                var c = a + b;
+                return c;
+            }
+            document.write(sum(4,3) + "<br />");
+
+            //Calling function from another function
+            function first(){
+                document.write(" First ");
+                second();
+            }
+            function second(){
+                document.write(" Second :) ");
+            }
+            first();
+
         </script>
+        <form>
+            <input type = "button", value = "Press button", onclick = "fun()" >
+        </form>
     </body>
 </html>
