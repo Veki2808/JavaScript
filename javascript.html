@@ -2,16 +2,47 @@
 <html>
 
 <head>
+    <script type="text/javascript">
+        function info(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        var vernes = new info("Vernes", 25);
+
+        Vernes = {
+            name: "Vernes Halilovic",
+            age: 25
+        }; // inline object initializers
+
+        //Adding methods to our objects
+        function people(name, age) {
+            this.name = name;
+            this.age = age;
+            this.ageToRetire = function retrire() {
+                return 65 - this.age;
+            };
+        }
+
+        function sum() {
+            this.plus = function saberi(a, b) {
+                this.a = a;
+                this.b = b;
+                var c = this.a + this.b;
+                return c;
+            };
+        }
+        var Niki = new people("Niki Miki", 45);
+        var x = new sum();
+    </script>
 </head>
 
-            <!--onunload -->
-<body onload="alert('GoodBye!!!');">
-    <form>
-        <input type="button" value="Press" onclick="alert('Warrning!!!');alert('Leave the page!!!');" />
-    </form>
-
-    <a href="http://www.google.com" onmouseover="alert('Warrning!!!')">Search with Google</a>
-
+<body>
+    <script type="text/javascript">
+        document.write(vernes.age);
+        document.write(Vernes.name);
+        document.write(Niki.ageToRetire());
+        document.write(x.plus(3, 5));
+    </script>
 </body>
 
 </html>
