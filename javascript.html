@@ -6,11 +6,18 @@
 
 <body>
     <script type="text/javascript">
+        var i = 0;
+        var j = 0;
 
-        for (i = 0; i < 5; i++) {
-            document.write("Hello World!!!","<br />");
+        while (i < 5) {
+            document.write(i, " ", "Hello World!!!", "<br />");
+            i++;
         }
 
+        do {
+            document.write("Beautiful World!!!", "<br />");
+            j++;
+        } while (j < 5);
     </script>
 
 </body>
