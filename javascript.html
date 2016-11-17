@@ -6,67 +6,28 @@
 
 <body>
     <script type="text/javascript">
-        var array = new Array("Vernes", "Halilovic", 25);
-        document.write(array[0], " ");
+        document.write(Math.PI, "<br />"); // value of pi
+        document.write(Math.E, "<br />"); //value of  Euler's number
 
-        var array_1 = new Array(2);
-        array_1[0] = "Vernes";
-        array_1[1] = "Halilovic";
-        array_1[2] = 25;
+        var n = prompt("Enter number: ");
+        var answer = Math.sqrt(n);
+        alert("The sqrt of number is " + answer, "<br />");
 
-        document.write(array_1[1], " ");
-
-        var array_2 = new Array();
-        array_2[0] = "Vernes";
-        array_2[1] = "Halilovic";
-        array_2[2] = 25;
-
-        var numbers = new Array(1,5,3,7,2);
-
-        document.write(array_2[2], "<br />");
-
-        //Array methods
-        document.write(array.length,"<br />"); // length of array
-
-        var connect = array.concat(array_1);
-        document.write(connect[3],"<br />"); //connect two arrays
-
-        var string_1 = array.join(" - "); //connect all elements in array and put mark insade join method
-                                                         //between elements
-        document.write(string_1, "<br />");
-
-        array_2.pop(); // delete last element in array
-        document.write(array_2[2],"<br />"); //return undefined because last element doesn't exist
-
-        numbers.reverse(); // reverse orders in array
-        document.write(numbers, "<br />");
-
-        numbers.push(3,9,4,6,8); // add elements at the end of array
-        document.write(numbers, "<br />");
-
-        numbers.sort(); // sort elements insade array
-        document.write(numbers, "<br />");
-
-//        var enter = prompt("Enter your name:");
-//        document.write(enter,"<br />");
-
-        //Add elements to array with javascript pop-up box
-          var add_to_array = new Array(3);
-
-        for (var i = 0; i < add_to_array.length; i++) {
-            add_to_array[i] = prompt("Add elements to array:");
+        function doSomething() {
+            document.write("Hello!!!");
         }
 
-        document.write(add_to_array);
+        setInterval("doSomething()", 1000);
 
-        //Associative Arrays
-        var new_array = new Array();
-        new_array["movie"] = "John Wick";
-        new_array["series"] = "Vikings";
+        function clock() {
+            var time = new Date();
+            var hours = time.getHours();
+            var min = time.getMinutes();
+            var sec = time.getSeconds();
+            document.write(hours + ":" + min + ":" + sec, "<br />");
+        }
 
-        document.write("My favourite movie is:  " , new_array["movie"], "  ",
-                                    "and my favourite series is: ", new_array["series"]);
-
+        setInterval("clock()", 1000);
     </script>
 </body>
 
