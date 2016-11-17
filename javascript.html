@@ -2,46 +2,71 @@
 <html>
 
 <head>
-    <script type="text/javascript">
-        function info(name, age) {
-            this.name = name;
-            this.age = age;
-        }
-        var vernes = new info("Vernes", 25);
-
-        Vernes = {
-            name: "Vernes Halilovic",
-            age: 25
-        }; // inline object initializers
-
-        //Adding methods to our objects
-        function people(name, age) {
-            this.name = name;
-            this.age = age;
-            this.ageToRetire = function retrire() {
-                return 65 - this.age;
-            };
-        }
-
-        function sum() {
-            this.plus = function saberi(a, b) {
-                this.a = a;
-                this.b = b;
-                var c = this.a + this.b;
-                return c;
-            };
-        }
-        var Niki = new people("Niki Miki", 45);
-        var x = new sum();
-    </script>
 </head>
 
 <body>
     <script type="text/javascript">
-        document.write(vernes.age);
-        document.write(Vernes.name);
-        document.write(Niki.ageToRetire());
-        document.write(x.plus(3, 5));
+        var array = new Array("Vernes", "Halilovic", 25);
+        document.write(array[0], " ");
+
+        var array_1 = new Array(2);
+        array_1[0] = "Vernes";
+        array_1[1] = "Halilovic";
+        array_1[2] = 25;
+
+        document.write(array_1[1], " ");
+
+        var array_2 = new Array();
+        array_2[0] = "Vernes";
+        array_2[1] = "Halilovic";
+        array_2[2] = 25;
+
+        var numbers = new Array(1,5,3,7,2);
+
+        document.write(array_2[2], "<br />");
+
+        //Array methods
+        document.write(array.length,"<br />"); // length of array
+
+        var connect = array.concat(array_1);
+        document.write(connect[3],"<br />"); //connect two arrays
+
+        var string_1 = array.join(" - "); //connect all elements in array and put mark insade join method
+                                                         //between elements
+        document.write(string_1, "<br />");
+
+        array_2.pop(); // delete last element in array
+        document.write(array_2[2],"<br />"); //return undefined because last element doesn't exist
+
+        numbers.reverse(); // reverse orders in array
+        document.write(numbers, "<br />");
+
+        numbers.push(3,9,4,6,8); // add elements at the end of array
+        document.write(numbers, "<br />");
+
+        numbers.sort(); // sort elements insade array
+        document.write(numbers, "<br />");
+
+//        var enter = prompt("Enter your name:");
+//        document.write(enter,"<br />");
+
+        //Add elements to array with javascript pop-up box
+          var add_to_array = new Array(3);
+
+        for (var i = 0; i < add_to_array.length; i++) {
+            add_to_array[i] = prompt("Add elements to array:");
+        }
+
+        document.write(add_to_array);
+
+        //Associative Arrays
+        var new_array = new Array();
+        new_array["movie"] = "John Wick";
+        new_array["series"] = "Vikings";
+
+        document.write("My favourite movie is:  " , new_array["movie"], "  ",
+                                    "and my favourite series is: ", new_array["series"]);
+
     </script>
 </body>
 
