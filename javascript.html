@@ -5,29 +5,24 @@
 </head>
 
 <body>
+    <form>
+
+        Username: <input type="text" />
+        Password: <input type="password" /> <br />
+        <input type="submit" value="Submit!" />
+    </form>
+    <br />
+    <form name="new_form">
+        Username: <input type="text" name="username" />
+        Password: <input type="password" name="password" /> <br />
+        <input type="submit" value="Submit!" />
+    </form>
+    <br />
     <script type="text/javascript">
-        document.write(Math.PI, "<br />"); // value of pi
-        document.write(Math.E, "<br />"); //value of  Euler's number
-
-        var n = prompt("Enter number: ");
-        var answer = Math.sqrt(n);
-        alert("The sqrt of number is " + answer, "<br />");
-
-        function doSomething() {
-            document.write("Hello!!!");
-        }
-
-        setInterval("doSomething()", 1000);
-
-        function clock() {
-            var time = new Date();
-            var hours = time.getHours();
-            var min = time.getMinutes();
-            var sec = time.getSeconds();
-            document.write(hours + ":" + min + ":" + sec, "<br />");
-        }
-
-        setInterval("clock()", 1000);
+        var x = document.forms[0].length;
+        var y = document.new_form.username.name;
+        document.write(x);
+        document.write(y);
     </script>
 </body>
 
