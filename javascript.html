@@ -1,27 +1,16 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-</head>
-<script type="text/javascript">
-    function validator() {
-        if(document.new_form.box.checked)
-            alert("Yess box is checked!!!");
-        else
-            alert("Box its not checked!!!")
-
-
-    }
-</script>
-
 <body>
-    <form name="new_form">
-        <input type="checkbox" name="box" />
-        <input type="button" value="Press me!" onclick="validator()" />
-    </form>
 
+    <h1>Turn ON/OFF light</h1>
 
-    </script>
+    <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn ON</button>
+
+    <img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+    <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn OFF</button>
+
 </body>
 
 </html>
